@@ -1,0 +1,111 @@
+---
+name: Terminal
+version: 0.1.0
+description: Run commands in Alfred or Terminal.
+category: Development
+bundleid: com.apple.Terminal
+createdby: Daniel Bayley
+webaddress: https://github.com/danielbayley/alfred-terminal#readme
+objects:
+- config:
+    argument: "-i -- {query}"
+  uid: 10B1246F-E4B9-4742-8B20-2A15B73D722D
+  version: 1
+  type: alfred.workflow.utility.argument
+- config:
+    hotkey: 47
+    hotmod: 1048576
+    relatedApps:
+    - com.github.atom
+    relatedAppsMode: 2
+    focusedappvariable: false
+    hotstring: "."
+    leftcursor: false
+    modsmode: 2
+  uid: 67D3B628-43A1-4872-A673-40A352915DA1
+  version: 2
+  type: alfred.workflow.trigger.hotkey
+- config:
+    largetypetext: "{query}"
+  uid: '048A0C27-BFA6-44B4-9064-0C0E1A1EE542'
+  version: 2
+  type: alfred.workflow.output.largetype
+- config:
+    withspace: true
+    keyword: ">"
+    text: Terminal
+  uid: C2C63A7B-9622-4746-8FAB-0E4C900F1675
+  version: 1
+  type: alfred.workflow.input.keyword
+- config:
+    cachescript: true
+  uid: 1E30C5FC-F37B-4638-B2D4-0CD10F8F26CB
+  version: 1
+  type: alfred.workflow.action.applescript
+- config:
+    hotkey: 47
+    hotmod: 1310720
+    relatedApps:
+    - com.github.atom
+    relatedAppsMode: 2
+    focusedappvariable: false
+    hotstring: "."
+    leftcursor: false
+    modsmode: 1
+  uid: C2E6058D-11FC-4BC9-9220-D5B92ADC1C85
+  version: 2
+  type: alfred.workflow.trigger.hotkey
+- config:
+    argument: "-il -- {query}"
+  uid: A2E500FA-9511-4E19-9B06-4707CC404A4E
+  version: 1
+  type: alfred.workflow.utility.argument
+connections:
+  A2E500FA-9511-4E19-9B06-4707CC404A4E:
+  - vitoclose: false
+    destinationuid: 1E30C5FC-F37B-4638-B2D4-0CD10F8F26CB
+  67D3B628-43A1-4872-A673-40A352915DA1:
+  - vitoclose: false
+    destinationuid: C2C63A7B-9622-4746-8FAB-0E4C900F1675
+  10B1246F-E4B9-4742-8B20-2A15B73D722D:
+  - vitoclose: false
+    destinationuid: 1E30C5FC-F37B-4638-B2D4-0CD10F8F26CB
+  C2E6058D-11FC-4BC9-9220-D5B92ADC1C85:
+  - vitoclose: false
+    destinationuid: A2E500FA-9511-4E19-9B06-4707CC404A4E
+  C2C63A7B-9622-4746-8FAB-0E4C900F1675:
+  - modifiersubtext: source .rc
+    modifiers: 1048576
+    destinationuid: 10B1246F-E4B9-4742-8B20-2A15B73D722D
+    vitoclose: false
+  - vitoclose: false
+    destinationuid: 1E30C5FC-F37B-4638-B2D4-0CD10F8F26CB
+  - modifiersubtext: Run in Terminal
+    modifiers: 524288
+    destinationuid: A2E500FA-9511-4E19-9B06-4707CC404A4E
+    vitoclose: false
+  1E30C5FC-F37B-4638-B2D4-0CD10F8F26CB:
+  - vitoclose: false
+    destinationuid: '048A0C27-BFA6-44B4-9064-0C0E1A1EE542'
+uidata:
+  A2E500FA-9511-4E19-9B06-4707CC404A4E:
+    ypos: 170
+    xpos: 370
+  67D3B628-43A1-4872-A673-40A352915DA1:
+    ypos: 20
+    xpos: 20
+  10B1246F-E4B9-4742-8B20-2A15B73D722D:
+    ypos: 10
+    xpos: 370
+  C2E6058D-11FC-4BC9-9220-D5B92ADC1C85:
+    ypos: 140
+    xpos: 20
+  '048A0C27-BFA6-44B4-9064-0C0E1A1EE542':
+    ypos: 20
+    xpos: 640
+  C2C63A7B-9622-4746-8FAB-0E4C900F1675:
+    ypos: 20
+    xpos: 170
+  1E30C5FC-F37B-4638-B2D4-0CD10F8F26CB:
+    ypos: 20
+    xpos: 490

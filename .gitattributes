@@ -1,0 +1,2 @@
+*.plist filter=plutil linguist-language=YAML
+*.gif filter=lfs diff=lfs merge=lfs -text
